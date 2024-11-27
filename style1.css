@@ -1,0 +1,137 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background: linear-gradient(120deg, #1b1b2f, hsl(0, 1%, 25%));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  animation: starfield 2s infinite linear;
+}
+
+
+@keyframes starfield {
+  50% {
+    background-position: 10 10;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+
+@keyframes magicGlow {
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 1), 0 0 100px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+}
+
+header {
+  padding: 40px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+
+h1 {
+  font-size: 3rem;
+  color: #e2970c;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: magicGlow 2s infinite ease-in-out;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 20px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+
+#planets-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+
+.planet {
+ 
+  padding: 20px;
+  text-align: center;
+ 
+  
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  position: relative;
+  animation: orbit 9s;
+}
+
+.planet img {
+  width: 190px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.planet h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.planet:hover {
+  transform: scale(2.2) ;
+  
+}
+
+.planet:hover img {
+  transform: scale(1.15);
+}
+
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(300px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(300px) rotate(-360deg);
+  }
+}
+
