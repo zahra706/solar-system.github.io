@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration Planètes</title>
+  <link rel="stylesheet" href="ad.css">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <h1>Administration - Thème Planètes</h1>
+
+    <!-- Formulaire d'ajout d'utilisateur -->
+    <div class="form-container">
+      <h2>Ajouter un Utilisateur</h2>
+      <form id="addUserForm">
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Ajouter l'utilisateur</button>
+      </form>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <div class="form-container">
+      <h2>Se Connecter</h2>
+      <form id="loginForm">
+        <label for="loginUsername">Nom d'utilisateur :</label>
+        <input type="text" id="loginUsername" required>
+
+        <label for="loginPassword">Mot de passe :</label>
+        <input type="password" id="loginPassword" required>
+
+        <button type="submit"><a href="planet.html">Se connecter</a></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="add.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
