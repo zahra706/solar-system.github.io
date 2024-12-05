@@ -159,4 +159,23 @@ footer p {
     .planet p {
         font-size: 1em;
     }
+    
+button{
+ 
+    
+    text-decoration: none;
+    font-size: 1.2rem;
+   margin-left: 40%;
+background-color: #e2970c;
+    padding: 10px 20px;
+    transition: all 0.3s ease;}
+
+
+  
+button:hover{
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    border-radius: 5px;
+    transform: scale(1.05);
+  }
 }
