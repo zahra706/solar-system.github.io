@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('photospace.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+#quiz {
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    display: inline-block;
+    
+    border-radius: 10px;
+    background: rgba(228, 222, 222, 0.5);
+}
+
+select, button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#result {
+    display: none;
+    
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul.answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.answers li {
+    margin: 10px 0;
+}
