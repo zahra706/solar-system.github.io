@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #000000, #050b23); 
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+@keyframes starfield {
+    50% {
+      background-position: 10 10;
+    }
+    100% {
+      background-position: 50% 50%;
+    }
+  }
+  
+  
+  @keyframes magicGlow {
+    50% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 50px rgba(255, 255, 255, 1), 0 0 100px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  header {
+    padding: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  h1 {
+    font-size: 3rem;
+    color: #e2970c;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: magicGlow 2s infinite ease-in-out;
+  }
+  
+  nav {
+    margin-top: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    border-radius: 5px;
+    transform: scale(1.05);
+  }
+  
+
+#planets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.planet {
+    background: transparent; 
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgb(213, 197, 176);
+}
+
+.planet:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.planet img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    box-shadow: none; 
+    margin-bottom: 20px;
+}
+
+.planet h2 {
+    font-size: 2em;
+    color: #dc8813ed;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.planet p {
+    font-size: 1.1em;
+    color: rgba(74, 64, 64, 0.873);
+    margin-bottom: 12px;
+}
+
+.planet p strong {
+    color: #ffcc00; 
+}
+
+footer {
+    background-color: #1d2d50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .planet h2 {
+        font-size: 1.5em;
+    }
+
+    .planet p {
+        font-size: 1em;
+    }
+    
+button{
+ 
+    
+    text-decoration: none;
+    font-size: 1.2rem;
+   margin-left: 40%;
+background-color: #e2970c;
+    padding: 10px 20px;
+    transition: all 0.3s ease;}
+
+
+  
+button:hover{
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    border-radius: 5px;
+    transform: scale(1.05);
+  }
+}

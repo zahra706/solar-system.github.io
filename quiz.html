@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Système Solaire</title>
+    <link rel="stylesheet" href="quiz-style.css">
+</head>
+<body>
+    <h1>Quiz Système Solaire</h1>
+    
+    <!-- Sélecteur de difficulté -->
+    <div>
+        <label for="difficulty">Choisissez la difficulté :</label>
+        <select id="difficulty" onchange="changeDifficulty()">
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+        </select>
+    </div>
+
+    <!-- Conteneur du quiz -->
+    <div id="quiz">
+        <!-- Les questions seront chargées ici -->
+    </div>
+
+    <div id="quiz-controls">
+        <button id="next-question" onclick="nextQuestion()">Suivant</button>
+    </div>
+
+    <!-- Affichage du résultat -->
+    <div id="result">
+        <p id="score"></p>
+        <button onclick="restartQuiz()">Recommencer</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
