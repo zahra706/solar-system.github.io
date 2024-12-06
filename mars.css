@@ -1,0 +1,89 @@
+/* Style général du body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: white;
+    overflow: hidden;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Section des informations de Mars */
+.mars-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.mars-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.mars-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Canvas pour étoiles animées */
+canvas#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* Étoiles en arrière-plan */
+}
+
+/* Lune animée en haut à droite */
+.moon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: 200px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg') no-repeat center/cover;
+    border-radius: 50%;
+    animation: moon-glow 5s infinite alternate;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: -1; /* Lune derrière le contenu principal */
+    pointer-events: none; /* Empêche les interactions avec la Lune */
+}
+
+@keyframes moon-glow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
