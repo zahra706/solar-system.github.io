@@ -1,0 +1,125 @@
+/* Style général du body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fond sombre */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête avec le titre */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Sections de contenu */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Conteneur des cartes */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Carte des astronautes/animaux */
+.astronaut-card, .animal-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajout d'un effet de survol */
+.astronaut-card:hover, .animal-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Images dans les cartes */
+.astronaut-card img, .animal-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Titre des cartes */
+h3 {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* Texte descriptif dans les cartes */
+p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Séparation entre les sections */
+#animaux, #astronautes {
+    margin-bottom: 50px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-top: 50px;
+    color: #bbb;
+}
+
+/* Pour les vidéos et les images en plein écran */
+video, iframe {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+/* Pour le texte des sections */
+#animaux p, #astronautes p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* Carte responsive (mobile-friendly) */
+@media (max-width: 768px) {
+    .astronaut-card, .animal-card {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
